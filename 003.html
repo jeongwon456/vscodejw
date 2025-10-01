@@ -28,6 +28,32 @@
        hi("김정원");
        hi("박승찬");
 
+       function start(){
+        document.write("가위 바위 보를 시작합니다.<br>");
+        let user = parseInt(Math.random()*3)+1;//1가위 2바위 3보
+        let com = parseInt(Math.random()*3)+1;
+
+        check(user);
+        check(com);
+
+        //결과 확인
+        result(user,com)
+       }
+       function result(u,c){
+        let res = "패";
+        if (u===c){
+            res = "비김"
+        }else if((u===1&&c===3)||(u===2&&c===1)||(u===3&&c===2)){
+            res = "승";
+        }
+        document.write(res);
+       }
+       function check(player){
+        let word = player === 1 ? "가위":player===2 ? "바위":"보";
+        document.write(word);
+       }
+       start();
+
     </script>
 </head>
 <body>
