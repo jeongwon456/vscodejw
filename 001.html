@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        let tall = 156;
+        const result = tall >= 140 ? "탑승가능":"탑승불가";
+
+        console.log(result);
+
+        let coin = 1;
+        let res = (coin===1)?"앞면":"뒷면"
+        console.log(res)
+
+        let item1 = 12000, item2 = 3500, item3 = 8000;
+        let total = item1+item2+item3;
+        let rres = (total>20000)?3000:0; 
+        console.log(`배송비는${rres}원`);
+        console.log(`총 ${total+rres}원`);
+
+        let num = parseInt(Math.random()*10)+1;
+        console.log(num);
+        res = (num%2)===1?"홀수":"짝수"; 
+        console.log(res);
+
+        let word = "i like banana";
+        console.log(`너는 어떤과일 좋아하니 <div class="box"> ${word}`);
+        console.log(word.length);
+        console.log(word[0]);
+        console.log(word.charAt(4));
+
+        console.log(word.split("").reverse().join(""));
+
+        let fullName = "홍길동";
+        document.write(`안녕하세요 저는 <b>${fullName}</b>입니다.`);
+        document.write(`이름의 길이는 <b style="color:red;">${fullName.length}</b>입니다.`);
+        document.writeln(`성은 <b>${fullName[0]}</b>입니다.`);
+        document.writeln("aa");
+        document.writeln("aa");
+        document.write(fullName.split("").reverse().join(""));
+
+        let st1 = 45 , st2 = 68 , st3 = 92 , st4 = 77 , st5 = 99;
+        let sts = st1 + st2 + st3 + st4 + st5;
+        
+        st1 = 65 , st2 = 44 , st3 = 88;
+        sts = st1 + st2 + st3;
+
+        st1 = 65 , st2 = 66 , st3 = 11;
+        sts = st1 + st2 + st3;
+            
+    </script>
+
+</head>
+<body>
+     
+</body>
+</html>

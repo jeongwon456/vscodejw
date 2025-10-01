@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        function print(text){
+            document.write(`<div>${text}</div>`);
+        }
+
+        function rectArea(w,h) {
+            print(`넓이 : ${w*h}`)
+        }
+        rectArea(20,8)
+
+        function grade(kor,mat,eng){
+            print(`총점 : ${kor+mat+eng}점<br>`)
+            print(`평균 : ${(kor+mat+eng)/3}점`)
+        }
+        grade(80,77,62)
+
+       function hi(name){
+        print(`안녕, ${name}!`)
+       }
+       hi("이순신");
+       hi("김정원");
+       hi("박승찬");
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
