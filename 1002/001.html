@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        function info(){
+            let name = document.getElementById("name").value;
+            let age = document.getElementById("age").value;
+            
+            const res = `이름 : ${name} , 나이 : ${age}`;
+
+            document.getElementById("result").innerText = res;
+        }
+
+    </script>
+    <style>
+        #wrap { width: 500px; margin: 50px auto; }
+        .input-field { display: flex; flex-direction: column; row-gap: 10px; }
+        .input-field input { outline: none; padding: 5px 10px; font-size: 20px; }
+        .bt { margin: 15px 0; }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="input-field">
+            <label for="name">이름</label><input type="text" id="name">
+            <label for="age">나이</label><input type="number" id="age"><br>
+        </div>
+        <div class="bt">
+            <button type="button" onclick="info()">내정보</button>
+        </div>
+    
+        <div id="result"></div>
+    </div>
+</body>
+</html>
