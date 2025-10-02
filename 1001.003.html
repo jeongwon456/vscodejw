@@ -29,15 +29,29 @@
        hi("박승찬"); */
 
       function start() {
-        document.write("가위 바위 보를 시작합니다.<br>");
+        document.write("======가위 바위 보를 시작합니다.======");
         let user = parseInt(Math.random() * 3) + 1; // 1:가위, 2:바위, 3:보
         let com = parseInt(Math.random() * 3) + 1;
 
-        check(user, "사용자");
-        check(com, "컴퓨터");
+        let u = check(user);
+        let c = check(com);
 
         // 결과 확인
-        result(user, com);
+        let r = result(user, com);
+
+        let out = `
+            <div class="userBox">
+                <div class="val">${u}</div>
+                <div class="player">유저</div>
+            </div>
+            <div class="res">${r}</div>
+            <div class="comBox">
+                <div class="val">${c}</div>
+                <div class="player">컴퓨터</div>
+            </div>
+            `;
+
+        document.write(`<div class="box">${out}</div>`)
     }
 
     function result(u, c) {
@@ -47,17 +61,30 @@
         } else if ((u === 1 && c === 3) || (u === 2 && c === 1) || (u === 3 && c === 2)) {
             res = "승";
         }
-        document.write("<br>결과: " + res);
+        /* document.write(res); */
+        return res;
     }
 
-    function check(player, name) {
+    function check(player) {
         let word = player === 1 ? "가위" : player === 2 ? "바위" : "보";
-        document.write(name + ": " + word + "<br>");
+        /* document.write(name + ": " + word + "<br>"); */
+        return word;
     }
 
     start();
 
     </script>
+    <style>
+
+        .box { display: flex; width: 500px; }
+        .userBox, .res, .comBox { flex: 1; }
+        .res { display: flex; align-items: center; justify-content: center; }
+        .userBox .val { background-color: violet; }
+        .comBox .val { background-color: greenyellow; }
+        .val { border: 1px solid #aaa; border-radius: 7px; margin: 20px; padding: 15px 0; text-align: center; }
+        .player { text-align: center; }
+
+    </style>
 </head>
 <body>
 
